@@ -2,6 +2,7 @@ package application;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -9,6 +10,7 @@ import entities.Client;
 import entities.Order;
 import entities.OrderItem;
 import entities.Product2;
+import entities.enums.OrderStatus;
 
 public class Program20 {
 
@@ -33,7 +35,7 @@ public class Program20 {
 		System.out.print("How many items to this order? ");
 		int n = sc.nextInt();
 		
-		Order order = new Order(0, new Date(), orderStatus, client);
+		Order order = new Order(0, new Date(), OrderStatus.valueOf(orderStatus), client);
 		
 		for (int i=1; i<=n; i++) {
 			System.out.println("Enter #" + i + " item data:");
