@@ -2,23 +2,26 @@ package entities;
 
 public class Account {
 	
-	private int number;
+	private Integer number;
 	private String holder;
-	private double balance;
+	protected Double balance;
 	
-	public Account(int number, String holder) {
+	public Account() {
+	}
+	
+	public Account(Integer number, String holder) {
 		this.number = number;
 		this.holder = holder;
 	}
 	
-	public Account(int number, String holder, double initialDeposit) {
-		super();
+	public Account(Integer number, String holder, Double balance) {
 		this.number = number;
 		this.holder = holder;
-		depositAmount(initialDeposit);
+		this.balance = balance;
+		//deposit(initialDeposit);
 	}
 
-	public int getNumber() {
+	public Integer getNumber() {
 		return number;
 	}
 		
@@ -30,11 +33,17 @@ public class Account {
 		this.holder = holder;
 	}
 	
-	public double getBalance() {
+	public Double getBalance() {
 		return balance;
 	}
 	
-	public void depositAmount(double amount) {
+	/* não é permitido - deve-se usar deposit()
+	public double setBalance() {
+		return balance;
+	}
+	*/
+	
+	public void deposit(double amount) {
 		balance += amount;
 	}
 	

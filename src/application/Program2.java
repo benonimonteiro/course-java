@@ -3,7 +3,7 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Product;
+import entities.Product1;
 
 public class Program2 {
 
@@ -12,7 +12,7 @@ public class Program2 {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		Product product = new Product();
+		Product1 product = new Product1();
 		
 		System.out.println("Enter product data: ");
 		System.out.print("Name: ");
