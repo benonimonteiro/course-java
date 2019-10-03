@@ -3,10 +3,12 @@ package application;
 import entities.Account;
 import entities.BusinessAccount;
 import entities.SavingsAccount;
+import exceptions.InsufficientFundsException;
+import exceptions.WithdrawalLimitExceededException;
 
 public class Program22 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws WithdrawalLimitExceededException, InsufficientFundsException {
 
 		Account acc1 = new Account(1001, "Alex", 1000.0);
 		acc1.withdraw(200.0);

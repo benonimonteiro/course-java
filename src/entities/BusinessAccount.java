@@ -1,5 +1,8 @@
 package entities;
 
+import exceptions.InsufficientFundsException;
+import exceptions.WithdrawalLimitExceededException;
+
 public class BusinessAccount extends Account {
 
 	private Double loanLimit;
@@ -28,7 +31,7 @@ public class BusinessAccount extends Account {
 	}
 	
 	@Override
-	public void withdraw(double amount) {
+	public void withdraw(double amount) throws WithdrawalLimitExceededException, InsufficientFundsException {
 		super.withdraw(amount);
 		balance -= 2.0;
 	}
