@@ -3,8 +3,18 @@ package entities;
 public class Product1 {
 	
 	public String name;
-	public double price;
-	public int quantity;
+	public Double price;
+	public Integer quantity;
+	
+	public Product1() {
+		
+	}
+	
+	public Product1(String name, Double price, Integer quantity) {
+		this.name = name;
+		this.price = price;
+		this.quantity =  quantity;
+	}
 	
 	public double totalValueInStock() {
 		return price * quantity;
